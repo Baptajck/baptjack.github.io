@@ -1,0 +1,43 @@
+// == Size Mobile
+@media screen and (min-width: 320px) {
+  .header {
+    background-color: rgb(161, 134, 134);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    
+
+    &-profil {
+      width: 150px;
+      height: 160px;
+      border-radius: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    &-title {
+      text-align: center;
+      color: #fff;
+    }
+
+    &-desc {
+      text-align: center;
+      color: #fff;
+      font-style: italic;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-evenly;
+
+    &-image {
+      width: 70px;
+      height: 70px;
+      margin-top: -2.4rem;
+    }
+  }
+}
