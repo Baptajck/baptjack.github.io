@@ -2,13 +2,15 @@ import React from 'react';
 
 import './home.scss';
 import profil from './profil.png';
-import github from './github.png';
+import github from './github4.png';
 import linkedin from './linkedIn.png';
 import twitter from './twitter.png';
+import fond from './blurry-926705_1920.jpg';
 
 const Home = () => (
   <div>
     <div className="header">
+      <img  className="image-header" src={fond} alt=""/>
       <img className="header-profil" src={profil} alt="" />
       <h1 className="header-title">Baptiste Parville</h1>
       <p className="header-desc">Developpeur Web | Front end</p>

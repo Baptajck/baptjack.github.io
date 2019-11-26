@@ -1,12 +1,19 @@
+
+
 // == Size Mobile
 @media screen and (min-width: 320px) {
   // == Header
+  .image-header {
+    position: absolute;
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+    top: 3.5rem;
+  }
   .header {
-    background-color: rgb(161, 134, 134);
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
-    
 
     &-profil {
       width: 130px;
@@ -17,29 +24,34 @@
       margin-right: auto;
       margin-top: 2rem;
       margin-bottom: 2rem;
+      position: relative;
     }
 
     &-title {
       text-align: center;
       color: #fff;
+      position: relative;
+      font-weight: bold;
     }
 
     &-desc {
       text-align: center;
       color: #fff;
       font-style: italic;
+      position: relative;
     }
   }
 
   // == Logo
   .logo {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
 
     &-image {
       width: 70px;
       height: 70px;
-      margin-top: -2.4rem;
+      margin-top: -2rem;
     }
   }
 
@@ -90,6 +102,10 @@
 
 // == Size Desktop
 @media screen and (min-width: 992px) {
+  .image-header {
+    height: 460px;
+  }
+
   .header {
     &-profil {
       width: 160px;
@@ -109,7 +125,10 @@
     display: flex;
     padding-top: 2rem;
     margin-bottom: 0;
-    margin-top: .5rem;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4rem;
 
     &-desc {
       width: 48%;
