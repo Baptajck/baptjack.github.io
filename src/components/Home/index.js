@@ -10,7 +10,7 @@ import fond from './blurry-926705_1920.jpg';
 const Home = () => (
   <div>
     <div className="header">
-      <img  className="image-header" src={fond} alt=""/>
+      <img className="image-header" src={fond} alt="" />
       <img className="header-profil" src={profil} alt="" />
       <h1 className="header-title">Baptiste Parville</h1>
       <p className="header-desc">Developpeur Web | Front end</p>

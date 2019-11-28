@@ -2,7 +2,7 @@
 const path = require('path');
 
 // Plugins de traitement pour dist/
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -40,7 +40,7 @@ module.exports = {
     chunkFilename: 'vendors.js',
     // Cible des bundles
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '',
   },
   // Optimisation pour le build
   optimization: {
@@ -48,15 +48,15 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
     },
-    // Minification
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: false, // passer à true pour JS source maps
+    // Minification TerserPlugin Ligne 52
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      cache: true,
+      parallel: true,
+      sourceMap: false,
       }),
       new OptimizeCSSAssetsPlugin({}),
-    ],
+      ],
   },
   // Modules
   module: {
