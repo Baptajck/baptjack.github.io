@@ -1,62 +1,46 @@
 // == Size Mobile
 @media screen and (min-width: 320px) {
-  // == Header
-  .image-header {
-    position: absolute;
-    object-fit: cover;
-    height: 400px;
-    width: 100%;
+  // == Toute la page
+  .body {
+    background-color: #232323;
+    padding-bottom: 2rem;
+
+    &-title {
+      color: #fff;
+      text-align: center;
+      padding-top: 2rem;
+      font-style: italic;
+      font-size: 2.7rem;
+    }
   }
+  // == Header
   .header {
     display: flex;
     flex-direction: column;
-    padding-bottom: 3rem;
+    justify-content: center;
 
-    &-profil {
-      width: 130px;
-      height: 140px;
-      border-radius: 50%;
-      display: block;
+    &-image {
+      width: 65%;
+      border-radius: 5%;
+      margin-top: 2rem;
+      border: 1px solid #eee;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      position: relative;
-      border: 1px solid white;
-    }
-
-    &-title {
-      text-align: center;
-      color: #fff;
-      position: relative;
-      font-weight: bold;
     }
 
     &-desc {
       text-align: center;
+      margin: 1rem;
       color: #fff;
-      font-style: italic;
-      position: relative;
     }
   }
-
-  // == Logo
-  .logo {
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-
-    &-image {
-      width: 70px;
-      height: 70px;
-      margin-top: -2rem;
-    }
+  // == Main
+  .main {
+    color: #fff;
   }
-
-  // == Information
   .description {
     box-shadow: 0px 0px 20px 0px rgb(185, 184, 184);
-    margin: 2rem 1rem;
+    margin: 2rem 1rem 0;
     padding: 1rem;
 
     &-desc{
@@ -84,64 +68,6 @@
       &-contact {
         font-size: 12px;
         font-style: italic;
-      }
-    }
-  }
-}
-
-
-// == Size Tablet
-@media screen and (min-width: 768px) {
-  .description-info-contact {
-    text-align: right;
-  }
-}
-
-
-// == Size Desktop
-@media screen and (min-width: 992px) {
-  .image-header {
-    height: 460px;
-  }
-
-  .header {
-    &-profil {
-      width: 160px;
-      height: 170px;
-    }
-
-    &-title {
-      font-size: 55px;
-    }
-
-    &-desc {
-      font-size: 20px;
-    }
-  }
-
-  .description {
-    display: flex;
-    padding-top: 2rem;
-    margin-bottom: 0;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 4rem;
-
-    &-desc {
-      width: 48%;
-    }
-
-    &-info {
-      margin-left: 5rem;
-      width: 48%;
-
-      &-title {
-        margin-top: 0;
-      }
-
-      &-contact {
-        text-align: right;
       }
     }
   }

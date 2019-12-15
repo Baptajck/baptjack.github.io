@@ -1,63 +1,28 @@
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable react/jsx-indent */
 // == Import : npm
-import React, { useState } from 'react';
+import React from 'react';
 
 // == Import : local
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'reactstrap';
 import './navigation.scss';
 
 // == Composant
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
-  return (
-    <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Baptjack</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/">Accueil</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#">A propos</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/contact">Contact</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Catégorie
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Profil
-                </DropdownItem>
-                <DropdownItem>
-                  home
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
-      </Navbar>
+const Navigation = () => (
+  <nav className="nav" role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      <ul id="menu">
+        <li><a className="a" href="#">Accueil</a></li>
+        <li><a className="a" href="#">A propos</a></li>
+        <li><a className="a" href="#">Catégories</a></li>
+        <li><a className="a" href="#">Contact</a></li>
+      </ul>
     </div>
-  );
-};
+  </nav>
+);
 
 // == Export
 export default Navigation;
