@@ -1,5 +1,6 @@
 /* eslint-disable react/self-closing-comp */
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import './error.scss';
 
@@ -17,7 +18,7 @@ const Error = () => (
     </div>
     <h1 className="number">404</h1>
     <h2 className="title-404">Page non trouvée</h2>
-    <div className="btn-404">Return to Home</div>
+    <div className="btn-404"><NavLink to="/" className="btn-404-text">Return to Home</NavLink></div>
   </div>
 );
 
