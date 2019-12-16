@@ -7,11 +7,11 @@ import './error.scss';
 const Error = () => (
   <div className="body-404">
     <div className="face">
-      <div className="band">
+      { /* <div className="band">
         <div className="red"></div>
         <div className="white"></div>
         <div className="blue"></div>
-      </div>
+      </div> */}
       <div className="eyes"></div>
       <div className="dimples"></div>
       <div className="mouth"></div>

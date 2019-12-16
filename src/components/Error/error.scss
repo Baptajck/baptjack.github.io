@@ -21,7 +21,7 @@ $break: 400px;
     border-radius: 10px;
     background-color: $wh;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 2.5rem;
     
     @media screen and (max-width: $break) {
       margin-top: 40px;
@@ -78,7 +78,9 @@ $break: 400px;
     .eyes {
       width: 128px;
       margin: 0 auto;
-      margin-top: 40px;
+      margin-top: 6rem;
+      display: flex;
+      justify-content: center;
       
       &:before {
         content: "";
@@ -147,6 +149,7 @@ $break: 400px;
     justify-content: center;
     font-size: 5rem;
     font-weight: bold;
+    margin-top: 2rem;
   }
 
   .title-404 {
