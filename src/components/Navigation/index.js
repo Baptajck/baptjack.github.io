@@ -2,17 +2,21 @@
 /* eslint-disable react/jsx-indent */
 // == Import : npm
 import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 // == Import : local
 import './navigation.scss';
 
 // == Composant
-const Navigation = () => (
-    <nav className="navbar">
+const Navigation = () => {
+  const { pathname } = useLocation();
+  console.log(pathname);
+  return (
+    <nav className="navbar" role="navigation">
     <ul className="navbar-nav">
       <li className="logo">
-        <a href="#" className="nav-link">
-          <span className="link-text logo-text">Baptjack</span>
+        <NavLink to="/" className="navbar-nav-link">
+          <span className="link-text logo-text">Homelayout</span>
           <svg
             aria-hidden="true"
             focusable="false"
@@ -38,11 +42,11 @@ const Navigation = () => (
               </path>
             </g>
           </svg>
-        </a>
+        </NavLink>
       </li>
 
-      <li className="nav-item">
-        <a href="#" className="nav-link">
+      <li className="navbar-nav-item" activeclassname="active">
+        <NavLink exact to="/" className="navbar-nav-link">
           <svg
             viewBox="0 0 20 17"
             fill="none"
@@ -56,16 +60,16 @@ const Navigation = () => (
             />
           </svg>
           <span className="link-text">Accueil</span>
-        </a>
+        </NavLink>
       </li>
 
-      <li className="nav-item">
-        <a href="#" className="nav-link">
+      <li className="navbar-nav-item" activeclassname="active">
+        <NavLink to="/categories" className="navbar-nav-link">
           <svg
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="svg-inline--fa fa-models fa-w-18 fa-9x"
+            className="svg-inline--fa fa-layout fa-w-18 fa-9x"
           >
             <path
               d="M4 11H9V5H4V11ZM4 18H9V12H4V18ZM10 18H15V12H10V18ZM16 18H21V12H16V18ZM10 11H15V5H10V11ZM16 5V11H21V5H16Z"
@@ -74,11 +78,11 @@ const Navigation = () => (
             />
           </svg>
           <span className="link-text">Catégories</span>
-        </a>
+        </NavLink>
       </li>
 
-      <li className="nav-item">
-        <a href="#" className="nav-link">
+      <li className="navbar-nav-item" activeclassname="active">
+        <NavLink to="/about" className="navbar-nav-link">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -92,29 +96,29 @@ const Navigation = () => (
             />
           </svg>
           <span className="link-text">A propos</span>
-        </a>
+        </NavLink>
       </li>
 
-      <li className="nav-item">
-        <a href="#" className="nav-link">
+      <li className="navbar-nav-item" activeclassname="active">
+        <NavLink to="/contact" className="navbar-nav-link">
           <svg
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="svg-inline--fa fa-message fa-w-20 fa-5x"
+            className="svg-inline--fa fa-message fa-w-20 fa-5x"
           >
           <path
             d="M20 2H4C2.9 2 2.01 2.9 2.01 4L2 22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM18 14H6V12H18V14ZM18 11H6V9H18V11ZM18 8H6V6H18V8Z"
             fill="currentColor"
-            class="fa-secondary"
+            className="fa-secondary"
           />
           </svg>
           <span className="link-text">Contact</span>
-        </a>
+        </NavLink>
       </li>
     </ul>
     </nav>
-);
-
+  );
+};
 // == Export
 export default Navigation;

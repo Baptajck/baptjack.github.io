@@ -1,0 +1,90 @@
+@import 'src/styles/vars';
+/*-------------------------------------------*\
+  Container Home - Size Mobile
+\*-------------------------------------------*/
+.home {
+  /* All content */
+  background-color: lighten(#20232a, 10%);
+  height: 100%;
+  width: 100%;
+  color: #eee;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+
+  /* Title of the home */
+  &-title {
+    padding-top: 4rem;
+    margin: 0 auto 2rem;
+    width: 80%;
+    text-transform: uppercase;
+    text-align: center;
+
+    &--home {
+      color: $rose;
+    }
+    &--layout {
+      color: $violet;
+    }
+  }
+  /* Text of the home */
+  &-description {
+    padding: 1.2rem 0;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  &-button {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #20232a;
+    border-radius: 1rem;
+    color: #fff;
+    transition: $transition-speed;
+
+    &:hover {
+      transition: $transition-speed;
+      color: $violet;
+      text-decoration: none;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 601px) {
+  /*-------------------------------------------*\
+    Container Home - Size Tablet & Computer
+  \*-------------------------------------------*/
+  .home {
+    padding-left: $marginSidebar;
+    margin: 0;
+    height: 100vh;
+
+    &-description {
+      text-align: justify;
+      margin: 2rem auto;
+    }
+
+    &-button {
+      width: 35%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /*-------------------------------------------*\
+    Container Home - Size Computer
+  \*-------------------------------------------*/
+  .home {
+    &-description {
+      text-align: justify;
+      margin: 2rem auto;
+    }
+
+    &-button {
+      width: 20%;
+    }
+  }
+}
