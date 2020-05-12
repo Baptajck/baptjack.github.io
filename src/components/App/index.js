@@ -39,7 +39,7 @@ const App = () => {
         <Route path="/categories">
           <Categories />
         </Route>
-        <Route exact path="/">
+        <Route exact path="/homelayout">
           <Home />
         </Route>
       </Switch>

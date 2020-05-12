@@ -2,20 +2,18 @@
 /* eslint-disable react/jsx-indent */
 // == Import : npm
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // == Import : local
 import './navigation.scss';
 
 // == Composant
 const Navigation = () => {
-  const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <nav className="navbar" role="navigation">
     <ul className="navbar-nav">
       <li className="logo">
-        <NavLink to="/" className="navbar-nav-link">
+        <NavLink to="/homelayout" className="navbar-nav-link">
           <span className="link-text logo-text">Homelayout</span>
           <svg
             aria-hidden="true"
@@ -46,7 +44,7 @@ const Navigation = () => {
       </li>
 
       <li className="navbar-nav-item" activeclassname="active">
-        <NavLink exact to="/" className="navbar-nav-link">
+        <NavLink exact to="/homelayout" className="navbar-nav-link">
           <svg
             viewBox="0 0 20 17"
             fill="none"
