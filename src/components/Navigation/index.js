@@ -13,7 +13,7 @@ const Navigation = () => {
     <nav className="navbar" role="navigation">
     <ul className="navbar-nav">
       <li className="logo">
-        <NavLink to="/homelayout" className="navbar-nav-link">
+        <NavLink to="/" className="navbar-nav-link">
           <span className="link-text logo-text">Homelayout</span>
           <svg
             aria-hidden="true"
@@ -44,7 +44,7 @@ const Navigation = () => {
       </li>
 
       <li className="navbar-nav-item" activeclassname="active">
-        <NavLink exact to="/homelayout" className="navbar-nav-link">
+        <NavLink exact to="/" className="navbar-nav-link">
           <svg
             viewBox="0 0 20 17"
             fill="none"

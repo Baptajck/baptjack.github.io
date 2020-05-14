@@ -18,11 +18,11 @@ async function updateDeps() {
   const file = fs.readFileSync('package.json');
   const content = JSON.parse(file);
 
-  for (let devDep in content.devDependencies) {
+  for (const devDep in content.devDependencies) {
     content.devDependencies[devDep] = `^${devDepsList[devDep].version}`;
   }
 
-  for (let dep in content.dependencies) {
+  for (const dep in content.dependencies) {
     content.dependencies[dep] = `^${depsList[dep].version}`;
   }
 

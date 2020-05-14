@@ -1,20 +1,20 @@
 // == Import : npm
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+// import { Provider } from 'react-redux';
+import { HashRouter as Router } from 'react-router-dom';
 
 // == Import : local
 import App from 'src/components/App';
-import store from 'src/store';
+// import store from 'src/store';
 
 // == Render
 const rootComponent = (
-  <Provider store={store}>
-    <Router>
-      <App />
-    </Router>
-  </Provider>
+  // <Provider store={store}>
+  <Router basename="/homelayout">
+    <App />
+  </Router>
+  // </Provider>
 );
 
 // Le rendu de React => DOM

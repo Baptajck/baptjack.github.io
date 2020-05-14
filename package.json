@@ -11,10 +11,7 @@
     "autoprefixer": "*",
     "babel-eslint": "*",
     "babel-loader": "*",
-    "chai": "*",
     "css-loader": "*",
-    "enzyme": "*",
-    "enzyme-adapter-react-16": "*",
     "eslint": "*",
     "eslint-config-airbnb": "*",
     "eslint-import-resolver-webpack": "*",
@@ -25,7 +22,6 @@
     "html-webpack-plugin": "*",
     "ignore-styles": "*",
     "mini-css-extract-plugin": "*",
-    "mocha": "*",
     "node-sass": "*",
     "optimize-css-assets-webpack-plugin": "*",
     "postcss": "*",
@@ -34,6 +30,7 @@
     "style-loader": "*",
     "stylelint": "*",
     "stylelint-config-recommended": "*",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "*",
     "webpack-cli": "*",
     "webpack-dev-server": "*"
@@ -54,9 +51,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.10.0",
-    "react-redux": "^7.1.0",
-    "react-router-dom": "^5.1.2",
-    "redux": "^4.0.1",
-    "terser-webpack-plugin": "^2.2.1"
+    "react-router-dom": "^5.1.2"
   }
 }

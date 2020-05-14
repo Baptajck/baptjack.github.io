@@ -2,7 +2,7 @@
 const path = require('path');
 
 // Plugins de traitement pour dist/
-const TerserPlugin = require('terser-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -49,14 +49,15 @@ module.exports = {
       chunks: 'all',
     },
     // Minification TerserPlugin Ligne 52
-    minimize: true,
-    minimizer: [new TerserPlugin({
-      cache: true,
-      parallel: true,
-      sourceMap: false,
+    // minimize: true,
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: false, // passer à true pour JS source maps
       }),
       new OptimizeCSSAssetsPlugin({}),
-      ],
+    ],
   },
   // Modules
   module: {

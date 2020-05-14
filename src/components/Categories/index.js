@@ -15,7 +15,7 @@ const Categories = () => (
       {categoriesDispo.map(({
         id, link, title, text,
       }) => (
-        <NavLink to={link} key={id} className="categories-cards">
+        <NavLink to={`/models/${link}`} key={id} className="categories-cards">
           <h2 className="categories-cards-title">{title}</h2>
           <p className="categories-cards-description"><strong className="categories-cards-description--strong">Description: </strong><br />{text}</p>
         </NavLink>
