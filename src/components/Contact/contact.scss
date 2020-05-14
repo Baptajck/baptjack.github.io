@@ -1,0 +1,13 @@
+.contact {
+  background-color: lighten(#20232a, 10%);
+  height: 100vh;
+  color: #eee;
+
+  /* Title of the categories */
+  &-title {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+}

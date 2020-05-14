@@ -31,6 +31,9 @@
     &-link {
       display: flex;
       align-items: center;
+      justify-content: center;
+      width: 90%;
+      margin: 0 auto;
       height: 5rem;
       color: $text-primary;
       text-decoration: none;
@@ -73,13 +76,14 @@
 .logo {
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1rem;
   text-align: center;
   color: $text-secondary;
   background: $bg-secondary;
   font-size: 1.2rem;
-  letter-spacing: 0.3ch;
-  width: 100%;
+  letter-spacing: 0.15ch;
+  width: 90%;
+  margin: 1rem;
+  border-radius: 1rem;
 }
 
 .logo svg {
@@ -123,10 +127,26 @@
 
 /* Large screens */
 @media only screen and (min-width: 601px) {
+  .active {
+    border-radius: 1rem;
+  }
   .navbar {
     top: 0;
     width: 7rem;
     height: 100vh;
+
+    &-nav-item {
+      transition: $transition-speed;
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+
+    &-nav-link {
+      &:hover {
+        border-radius: 1rem;
+        transition: $transition-speed;
+      }
+    }
 
     &:hover {
       width: 16rem;

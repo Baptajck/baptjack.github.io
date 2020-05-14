@@ -15,6 +15,8 @@
   &-title {
     text-align: center;
     padding-top: 2rem;
+    font-size: 2em;
+    text-transform: uppercase;
   }
 
   /* container of the cards */
@@ -39,35 +41,32 @@
     margin: 1.5rem;
 
     &:hover {
-      background-color: darken(#eee, 10%);
-      -webkit-box-shadow: 0px 0px 10px 0px rgba(238, 238, 238, 0.9);
-      -moz-box-shadow: 0px 0px 10px 0px rgba(238, 238, 238, 0.9);
-      box-shadow: 0px 0px 10px 0px rgba(238, 238, 238, 0.9);
+      background-color: darken(#eee, 20%);
       text-decoration: none;
-      // border-radius: 2rem;
       color: #292929;
       transition: $transition-speed;
     }
-
-    // &-image {
-    //   width: 100%;
-    //   height: 100px;
-    // }
 
     &-title {
       margin: 1rem 0;
       font-weight: 600;
       letter-spacing: .2rem;
+      font-size: 1.5em;
+      font-style: italic;
     }
 
     &-description {
       text-align: justify;
-      font-size: 14px;
+      font-size: 13px;
+      line-height: 1.1rem;
       font-weight: 500;
 
       &--strong {
         text-decoration: underline;
         font-style: italic;
+        font-weight: 600;
+        font-size: 1em;
+        margin: 1rem 0;
       }
     }
 
@@ -115,7 +114,7 @@
     }
   }
   /* specimen top left*/
-  &-speciment-top-left {
+  &-specimen-top-left {
     top: -10px;
     left: -10px;
   }
@@ -124,15 +123,17 @@
     border-top-color: transparent;
     border-left-color: transparent;
   }
-  &-speciment-top-left::before {
-    top: 0;
-    right: 0;
+  &-specimen-top-left::before {
+    top: 0px;
+    right: 1px;
+    opacity: .7;
   }
-  &-speciment-top-left::after {
-    bottom: 0;
-    left: 0;
+  &-specimen-top-left::after {
+    bottom: 1px;
+    left: 0px;
+    opacity: .7;
   }
-  &-speciment-top-left span {
+  &-specimen-top-left span {
     right: -25px;
     top: 30px;
     transform: rotate(-45deg);

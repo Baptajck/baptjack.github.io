@@ -8,6 +8,7 @@ import Navigation from 'src/components/Navigation';
 import Home from 'src/components/Home';
 import Categories from 'src/components/Categories';
 import About from 'src/components/About';
+import Contact from 'src/components/Contact';
 
 // == Composant
 const App = () => {
@@ -19,6 +20,9 @@ const App = () => {
         break;
       case '/about':
         document.title = 'A Propos | Home Layout';
+        break;
+      case '/contact':
+        document.title = 'Contact | Home Layout';
         break;
       default:
         document.title = 'Home Layout';
@@ -38,6 +42,9 @@ const App = () => {
         </Route>
         <Route path="/categories">
           <Categories />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
         <Route exact path="/homelayout">
           <Home />

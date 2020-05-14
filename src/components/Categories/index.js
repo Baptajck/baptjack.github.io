@@ -8,7 +8,7 @@ import './categories.scss';
 import categoriesDispo, { categoriesNonDispo } from './categories';
 // == Composant
 const Categories = () => (
-  <div className="categories">
+  <section className="categories">
     <h1 className="categories-title">Catégories</h1>
     {/* Catégories */}
     <div className="categories-container">
@@ -21,17 +21,16 @@ const Categories = () => (
         </NavLink>
       ))}
       {categoriesNonDispo.map(({ id, title, text }) => (
-        <button type="button" key={id} className="categories-cards--soon" disabled>
+        <div key={id} className="categories-cards--soon" disabled>
           <h2 className="categories-cards-title">{title}</h2>
           <p className="categories-cards-description">
             <strong className="categories-cards-description--strong">Description: </strong><br />{text}
           </p>
-          <p className="categories-cards--soon-specimen categories-speciment-top-left"><span>A venir</span></p>
-        </button>
+          <p className="categories-cards--soon-specimen categories-specimen-top-left"><span>A venir</span></p>
+        </div>
       ))}
-
     </div>
-  </div>
+  </section>
 );
 
 // == Export
