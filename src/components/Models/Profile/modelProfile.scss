@@ -8,15 +8,15 @@
   height: 100%;
   width: 100%;
   color: #eee;
-  margin-bottom: 5rem;
-  padding-bottom: 2rem;
+  // padding-bottom: 5rem;
+  // padding-bottom: 2rem;
 
   &-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
 
   &-cards {
@@ -24,10 +24,32 @@
     background-color: #eee;
     color: #000;
     text-align: center;
-    // padding: 1rem;
     border-radius: .3rem;
     transition: $transition-speed;
     margin: 1.5rem;
+    position: relative;
+
+    &-countDown {
+      position: absolute;
+      top: 0;
+      color: #fff;
+      left: 0%;
+      font-size: 1.3rem;
+      background-color: rgba(0, 0, 0, .7);
+      width: 100%;
+      height: 100%;
+      border-radius: 0.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--count {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
 
     &-co {
       padding: 1rem;

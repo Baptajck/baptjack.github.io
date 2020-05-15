@@ -25,8 +25,8 @@ const App = () => {
       case '/contact':
         document.title = 'Contact | Home Layout';
         break;
-      case '/models/:category':
-        document.title = 'Maquette | Home Layout';
+      case '/models/profile':
+        document.title = 'Modèles Profil | Home Layout';
         break;
       default:
         document.title = 'Home Layout';
@@ -38,7 +38,7 @@ const App = () => {
   });
 
   return (
-    <div id="app">
+    <div>
       <Navigation />
       <Switch>
         <Route path="/about">

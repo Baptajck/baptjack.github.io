@@ -2,9 +2,12 @@ export const modelsNonDispo = [
   {
     id: 1,
     title: 'Home',
-    text: `
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, dolorem consequatur vel dolorum id ipsam quas! Inventore impedit excepturi, in a necessitatibus odio molestias repudiandae eius ab perspiciatis blanditiis ipsum!
-    `,
+    image: {
+      image: 'https://i.imgur.com/IYOJ3VA.png',
+      alt: 'premier nom',
+    },
+    link: 'home',
+    text: '',
   },
 ];
 

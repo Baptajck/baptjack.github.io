@@ -17,6 +17,7 @@ const Models = () => {
     switch (model) {
       case 'profile':
         return <ProfileModels />;
+        // break;
       case 'contact':
         return <ContactModels />;
       default:
@@ -24,7 +25,6 @@ const Models = () => {
   };
   return (
     <section className="models">
-      <h1 className="models-title">Maquettes</h1>
       {choideModels()}
     </section>
   );
